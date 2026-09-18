@@ -1,6 +1,6 @@
 ---
 name: ai-product-workflow
-version: 1.1.0
+version: 1.1.1
 status: stable
 license: MIT
 description: Guide product managers to run full product cycles with AI Agents — project init, market analysis, requirement research, analysis, prototype, PRD, review, development sync, testing, release, feedback loop, plus Agent permissions, output quality gates, and version iteration. Use when user wants to initialize a product project scaffold, let Agent join end-to-end product work, build long-term product context, or apply AI product manager workflow.
@@ -230,6 +230,7 @@ For products that are themselves AI-powered, define per AI feature: model, input
 - `references/ai-product-rules.md` — AI product specific requirements
 - `references/multi-agent.md` — multi-Agent collaboration patterns
 - `references/version-iteration.md` — version iteration principles
+- `references/new-project-bootstrap.md` — first-two-weeks checklist for a new product project
 - `references/skill-ecosystem.md` — online skill ecosystem mapping (reference only, no installation)
 - `assets/rules/` — copy-ready core rule templates (naming-and-structure, source-of-truth, status-and-gates, product-workflow, agent-permissions, evidence-and-confidence, quality-gates, change-management)
 - `assets/templates/` — requirement pool + card, confirmation summary, tiered PRD skeleton, review record, decision log, metrics definition, skill integration plan

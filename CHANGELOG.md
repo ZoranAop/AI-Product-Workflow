@@ -2,6 +2,11 @@
 
 本项目遵循 [语义化版本](https://semver.org/lang/zh-CN/)：`MAJOR.MINOR.PATCH`。
 
+## [1.1.1] - 2026-09-18
+
+### Added
+- **新品项目 Bootstrap 检查清单**：新增 `references/new-project-bootstrap.md`，为新产品项目提供前 14 天落地清单（minimal 起步、先填 `02-product/`、指标口径、何时切 full、非 AI 产品可跳过的章节）。
+
 ## [1.1.0] - 2026-09-18
 
 ### Added
