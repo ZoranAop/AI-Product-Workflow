@@ -1,8 +1,8 @@
 # AI Product Workflow
 
-> **产品经理 + AI Agent：从市场分析到产品发布与反馈闭环的端到端协作规范**
+> **产品经理 + AI Agent：项目理解、检查、推进与迭代的完整框架**
 >
-> 让 AI Agent 不再是单次工具，而是能全程参与的长期协作伙伴。
+> 让 AI Agent 不仅是工作流执行者，更能作为一把可复用的“产品检查标尺”：读懂任意项目、检查其完整性与一致性、判断阶段门槛、追踪变更影响、并在复盘中反哺体系本身。
 
 **版本：** v1.2.0
 **状态：** 正式发布（stable）
@@ -12,14 +12,28 @@
 
 ## 简介
 
-本项目提供一套面向产品经理 + AI Agent 的标准化工作流，覆盖：
+本项目提供两套互补的能力：
 
-项目初始化 → 产品目标与指标 → 市场与用户研究 → 需求分析与优先级 → 技术可行性 → 原型与交互设计 → 分级 PRD → 评审与决策记录 → 开发同步 → 测试验收 → 发布与运营反馈 → 复盘迭代。
+### 1. 产品工作流（核心）
+面向产品经理 + AI Agent 的标准化端到端工作流：项目初始化 → 产品目标与指标 → 市场与用户研究 → 需求分析与优先级 → 技术可行性 → 原型与交互设计 → 分级 PRD → 评审与决策记录 → 开发同步 → 测试验收 → 发布与运营反馈 → 复盘迭代。
 
-- **在线 Skill 生态映射**（v1.1）
-- **产品完整性检查层（v1.2）**：在原有工作流、规则、模板之上补齐“可执行检查”——完整性矩阵、一致性检查、证据判定、Stage Gate 机器可判定规则、检查报告与回归集。对应 6 个检查模式（Understand / Advance / Completeness / Consistency / Change Impact / Retrospective），路由见 `references/check-modes.md`。
+### 2. 产品检查层（v1.2 新增）
+在原有工作流、规则、模板之上，补齐“可执行检查”：完整性矩阵（PC-* 检查项）、跨文档一致性检查、证据判定（VERIFIED / ASSUMED / INFERRED / UNVERIFIED）、Stage Gate 机器可判定规则、检查报告与回归集。对应 6 个检查模式（Understand / Advance / Completeness / Consistency / Change Impact / Retrospective），路由见 `references/check-modes.md`。
 
-核心理念：维护持久、准确的项目上下文，使 Agent 能从市场分析一路工作到发布与反馈，无需反复重新解释。
+### 六个检查模式
+
+| 模式 | 核心问题 |
+|------|----------|
+| Project Understanding | 这个项目是什么？ |
+| Product Workflow | 这个项目应该怎么推进？ |
+| Product Completeness | 这个项目/需求完整吗？ |
+| Product Consistency | 项目内部有没有冲突？ |
+| Product Change Impact | 修改一个地方会影响什么？ |
+| Product Retrospective | 做完以后如何反哺体系？ |
+
+形成“双向闭环”：检查输出 → 决策/变更 → 开发/测试/发布 → 实际结果 → 复盘 → 规则优化 → 下一轮检查更精确。
+
+核心理念：维护持久、准确的项目上下文，使 Agent 能从市场分析一路工作到发布与反馈，无需反复重新解释；同时每一轮检查都能让体系本身变得更准。
 
 ## 目录
 
