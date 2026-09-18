@@ -2,10 +2,33 @@
 
 本项目遵循 [语义化版本](https://semver.org/lang/zh-CN/)：`MAJOR.MINOR.PATCH`。
 
+## [1.2.0] - 2026-09-18
+
+### Added
+- **Product Completeness Check Engine**：`assets/rules/completeness-check.md`，将 checklist 升级为可执行检查：Check Result Model（PASS/FAIL/UNKNOWN/N/A）、12 步执行协议、Check ID 体系（PC-PRODUCT / PC-UX / PC-DATA / PC-TECH / PC-AI / PC-AGENT / PC-BILLING / PC-SECURITY / PC-TEST / PC-RELEASE / PC-METRICS / PC-CONSIST / PC-GATE）、各完整性矩阵、跨文档一致性检查、Stage Gate 机器可判定规则、变更影响分析、回归集约定。
+- **六个检查模式**：`references/check-modes.md` 定义 Understand / Advance / Completeness / Consistency / Change Impact / Retrospective 路由；`references/project-understanding.md`（证据标注的项目理解摘要，草案性质）；`references/retrospective-loop.md`（复盘结论走 change-management 闸门 + regression 重跑才修改规则）。
+- **统一证据模型升级**：`evidence-and-confidence.md` 由三级（Verified/Assumed/Unverified）升级为四级（VERIFIED / ASSUMED / INFERRED / UNVERIFIED），并新增检查结果判定规则表与“AI 推断 → 正式事实”防火墙规则。
+- **Source of Truth 完整映射表**：`source-of-truth.md` 补齐 8 行信息→唯一来源映射（含 Version Scope、Test Evidence、Release Evidence、Raw Inputs），并定义 5 条跨文档一致性不变量（status / scope / decision / acceptance / evidence）。
+- **Completeness Report 模板**：`assets/templates/completeness-report.md`，11 节结构 + 人工确认块，未确认仅为草案。
+- **AI Regression Cases 模板**：`assets/templates/ai-regression-cases.md`，6 个固定 case（完整需求 / 缺 Billing / PRD 与技术冲突 / AI 无 fallback / 仅 AI 推断证据的 released / 版本范围与状态不符），含预期结果表与运行日志。
+
+### Changed
+- `SKILL.md` 新增 §6 Check Modes 与 3 条反模式（理解摘要/报告不得替代事实来源、不得在 PRD/Agent spec 内编辑 status、复盘不得未经决策+回归直接改规则）；原 §6–§9 顺移为 §7–§10。
+- `init-product-project.sh` full 模式现在拷贝 `completeness-check.md` 到 `00-rules/`，`ai-regression-cases.md` 与 `completeness-report` 模板到 `03-planning/`。
+
+### Fixed
+- 状态机冲突：`reviewing` 不是状态，仅是闸门动作。修正 3 处引用——`assets/rules/status-and-gates.md`、`assets/rules/change-management.md`、`references/status-machine.md`，统一为“重大变更回 `analyzing`，仅复审回 `defined`”，状态机保持 6 态（candidate → analyzing → defined → approved → released → closed）。
+- `dual-prd-skeleton.md` 中 Agent spec 的 `status` 字段定位为 derived view（只读展示，唯一维护源为 requirement pool），消除与 source-of-truth 规则的矛盾。
+- 双 PRD 规则统一为“单一结构化需求源 + 人工视图 + Agent 视图”，Agent 视图不得成为 status 维护源。
+
+---
+
 ## [1.1.1] - 2026-09-18
 
 ### Added
 - **新品项目 Bootstrap 检查清单**：新增 `references/new-project-bootstrap.md`，为新产品项目提供前 14 天落地清单（minimal 起步、先填 `02-product/`、指标口径、何时切 full、非 AI 产品可跳过的章节）。
+
+---
 
 ## [1.1.0] - 2026-09-18
 

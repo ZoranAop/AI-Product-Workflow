@@ -11,6 +11,8 @@ Use this skeleton for complex requirements that need an Agent-readable spec alon
 |-------|-------|
 | requirement_id | req-XXXX-<short-name> |
 | status | candidate / analyzing / defined / approved / released / closed |
+
+> **`status` is a derived view here, not a maintenance source.** The only place status is maintained is the requirement pool (see `00-rules/source-of-truth.md`). This field is copied from the pool for Agent convenience and must never be edited in the spec; if it disagrees with the pool, the pool wins and the spec must be re-synced.
 | priority | P0 / P1 / P2 / P3 |
 | owner | <product manager> |
 | approved_by | |

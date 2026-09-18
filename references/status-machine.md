@@ -22,7 +22,7 @@ candidate → analyzing → defined → approved → released → closed
 1. Status is maintained **only** in the requirement pool. Never copy status into other files.
 2. After `approved`, any substantive change must:
    - Record the change and its background
-   - Move status back to `reviewing` (or `analyzing` if major)
+   - Move status back to `analyzing` (major change) or `defined` (review-only change). `reviewing` is not a status.
 3. `released` requires actual launch verification evidence (not just "code merged").
 4. A single requirement should be independently definable, reviewable, developable, and acceptable.
 

@@ -163,7 +163,20 @@ Permission levels (L0 read-only → L1 draft write → L2 project write → L3 e
 
 Judge not only "did the Agent produce output" but "is it trustworthy". Track task completion, accuracy, fact-error rate, requirement/edge miss rate, human-edit ratio, tool-call error rate, cost, and latency. Maintain a fixed AI regression test set and re-run on model or workflow changes. See `assets/rules/quality-gates.md` and `references/multi-agent.md` for auto-execution vs human-approval boundaries.
 
-## 6. Project Health Check
+## 6. Check Modes
+
+Beyond the linear workflow, the Agent can be asked to run six check modes on the project. They share one rule set; routing is by question:
+
+- **Understand** — "what is this project?" → `references/project-understanding.md`
+- **Advance** — the normal stage workflow above
+- **Completeness** — "is this complete?" → `assets/rules/completeness-check.md` (PC-* matrices, 12-step protocol, report)
+- **Consistency** — "do the documents contradict?" → PC-CONSIST + `assets/rules/source-of-truth.md` invariants
+- **Change Impact** — "what does this change affect?" → `completeness-check.md` § Change Impact Analysis, then the change-management gate
+- **Retrospective** — "what should the system learn?" → `references/retrospective-loop.md`
+
+Full routing rules and output discipline: `references/check-modes.md`.
+
+## 7. Project Health Check
 
 Periodically or at version end, run a health check:
 
@@ -179,15 +192,15 @@ Periodically or at version end, run a health check:
 
 See `references/health-check.md` for the checklist.
 
-## 7. Version Iteration
+## 8. Version Iteration
 
 Every version forms a closed loop: goal → problem → requirement → decision → development → testing → release → metrics → feedback → retrospective → next version. End-of-version, answer five questions: (1) what problem did we set out to solve? (2) what did we actually do? (3) do users actually use it? (4) did the result meet expectations? (5) what should change next? See `references/version-iteration.md`.
 
-## 8. AI-Product Specific Rules
+## 9. AI-Product Specific Rules
 
 For products that are themselves AI-powered, define per AI feature: model, input, output, context, tools, permissions, cost, latency, failure strategy, degradation strategy. For in-product Agents define identity, permissions, tools, data access, memory scope, execution scope, user authorization, logs, exception handling, and human takeover. For AI billing define billing unit, quota, deduction timing/failure, insufficient balance, retry, refund, plan state, expiry, renewal, reconciliation — and treat billing rules as formal product baseline that Agents must not modify without authorization. See `references/ai-product-rules.md`.
 
-## 9. Minimal vs Full Setup
+## 10. Minimal vs Full Setup
 
 - **Minimal (start here)**: `00-rules/`, `01-inputs/`, `02-product/`, `05-requirements/` plus requirement status, basic decision recording, and basic acceptance criteria. Use `--minimal`.
 - **Full**: Complete directory set (00–07, 90, 99), tiered PRD, full decision log, Agent permissions, AI quality gates, release plans, data retrospectives. Use default.
@@ -210,11 +223,17 @@ For products that are themselves AI-powered, define per AI feature: model, input
 - Changing decisions in meetings but never writing the background back.
 - Generating PRD or prototype before providing design or format constraints.
 - Using the Agent as a pure messenger (PM asks Agent, then relays to engineering).
+- Letting an understanding summary or completeness report become "the fact" — derived views must always cite their source; the source wins on conflict.
+- Editing `status` inside a PRD / Agent spec — status lives only in the requirement pool.
+- Letting a retrospective amend rules without a recorded decision and a regression re-run.
 
 ## Resource Map
 
 - `scripts/init-product-project.sh` — one-command scaffold (`--minimal` or full)
 - `references/directory-structure.md` — full directory responsibilities
+- `references/check-modes.md` — the six check modes (understand / advance / completeness / consistency / change impact / retrospective)
+- `references/project-understanding.md` — entry point for reading an unfamiliar project, with evidence-labeled summary template
+- `references/retrospective-loop.md` — version-end reflection that feeds rule amendments through the change-management gate
 - `references/context-layers.md` — four-layer knowledge model
 - `references/status-machine.md` — status flow and gates
 - `references/dual-prd-spec.md` — tiered PRD rules
@@ -232,5 +251,5 @@ For products that are themselves AI-powered, define per AI feature: model, input
 - `references/version-iteration.md` — version iteration principles
 - `references/new-project-bootstrap.md` — first-two-weeks checklist for a new product project
 - `references/skill-ecosystem.md` — online skill ecosystem mapping (reference only, no installation)
-- `assets/rules/` — copy-ready core rule templates (naming-and-structure, source-of-truth, status-and-gates, product-workflow, agent-permissions, evidence-and-confidence, quality-gates, change-management)
-- `assets/templates/` — requirement pool + card, confirmation summary, tiered PRD skeleton, review record, decision log, metrics definition, skill integration plan
+- `assets/rules/` — copy-ready core rule templates (naming-and-structure, source-of-truth, status-and-gates, product-workflow, agent-permissions, evidence-and-confidence, quality-gates, change-management, completeness-check)
+- `assets/templates/` — requirement pool + card, confirmation summary, tiered PRD skeleton, review record, decision log, metrics definition, skill integration plan, completeness report, AI regression cases

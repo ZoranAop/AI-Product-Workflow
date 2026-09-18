@@ -28,7 +28,7 @@ Control how changes to formal product baselines are proposed, recorded, and appl
 
 ## Rules
 
-- An approved requirement that changes substantively must move status back to `reviewing` or `analyzing`.
+- An approved requirement that changes substantively must move status back to `analyzing` (or `defined` if the change only affects the review of an already-defined design). `reviewing` is a gate action, not a status.
 - If a decision is reversed, the original entry stays; append a new entry that supersedes it, never delete history.
 - Any Agent-performed L2+ change must carry an audit entry naming the authorizing human.
 - Changes made in meetings must be written back before the meeting ends or within the agreed window; otherwise they do not exist.

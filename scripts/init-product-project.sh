@@ -127,6 +127,14 @@ if [[ "$MODE" == "full" ]]; then
   if [[ ! -f 04-requirement-pool/requirement-pool.md ]]; then
     cp -n "$SKILL_ROOT/assets/templates/requirement-pool.md" "04-requirement-pool/requirement-pool.md" 2>/dev/null || touch 04-requirement-pool/requirement-pool.md
   fi
+  # Completeness check engine: copy new rule + templates so the project has its own check baseline
+  cp -n "$SKILL_ROOT/assets/rules/completeness-check.md" "00-rules/completeness-check.md" 2>/dev/null || true
+  if [[ ! -f 03-planning/ai-regression-cases.md ]]; then
+    cp -n "$SKILL_ROOT/assets/templates/ai-regression-cases.md" "03-planning/ai-regression-cases.md" 2>/dev/null || touch 03-planning/ai-regression-cases.md
+  fi
+  if [[ ! -f 03-planning/completeness-report-template.md ]]; then
+    cp -n "$SKILL_ROOT/assets/templates/completeness-report.md" "03-planning/completeness-report-template.md" 2>/dev/null || true
+  fi
 fi
 
 # Seed minimal entry files for stable product facts
