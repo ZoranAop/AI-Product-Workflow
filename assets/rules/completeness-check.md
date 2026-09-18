@@ -66,6 +66,7 @@ Run by scope (`Run PC-AI-*`), by version, or ALL. Every check item must carry it
 ## Completeness Matrices
 
 A matrix applies to a requirement when its scope matches. "Applies" is a judgment the Agent states in the report (with reason); when in doubt, apply it and mark individual items N/A with reasons.
+- **Applicability grading (Required / Conditional / Recommended / N/A)**: Required = must always check when scope matches (default for core checks like PC-PRODUCT, PC-GATE); Conditional = only check when pre-conditions met (e.g., PC-TEST-003 only when testing phase reached); Recommended = advised for quality/robustness but not gate-blocking (e.g., PC-UX-004 when auth is relevant); N/A = explicitly out of scope, with recorded reason. Use this to prevent over-checking simple/minimal projects.
 
 ### PC-PRODUCT (always applies to formal requirements)
 
