@@ -12,12 +12,12 @@ Enable an AI Agent to participate in the complete product lifecycle as a long-te
 
 ## When to Use
 
-- User asks to initialize a product project for AI collaboration
-- User wants Agent involvement from requirement to launch
-- User mentions product project init, full-process participation, building Agent project space, or AI product manager workflow
+- User wants to understand an unfamiliar project (Understand) or advance through stage gates (Advance)
+- User asks for completeness, consistency, change impact, or retrospective checks
+- User needs project review, audit, quality framework improvement (Review / Quality)
 - Starting a new feature or version that needs sustained context
 - Multiple Agents need to share one product knowledge base
-- User needs AI assistance across market, user, competitor, and requirement analysis
+- User wants structured evidence-labeled findings and action tracking
 - User needs decision and change records with traceability
 
 ## Core Principles (Five Methods)
@@ -231,9 +231,11 @@ For products that are themselves AI-powered, define per AI feature: model, input
 
 - `scripts/init-product-project.sh` — one-command scaffold (`--minimal` or full)
 - `references/directory-structure.md` — full directory responsibilities
+- **两套 Evidence 区别**：通用证据（VERIFIED / ASSUMED / INFERRED / UNVERIFIED）描述“事实/结论/检查结果的可信状态”，绑定关键事实、检查结论、正式基线、关键决策；测试执行证据（AI-inferred / actually-executed / human-verified）描述“检查是否真实执行、由谁验证”。两套互补，不可混用。
 - `references/check-modes.md` — the six check modes (understand / advance / completeness / consistency / change impact / retrospective)
 - `references/project-understanding.md` — entry point for reading an unfamiliar project, with evidence-labeled summary template
 - `references/retrospective-loop.md` — version-end reflection that feeds rule amendments through the change-management gate
+- **PASS / FAIL / UNKNOWN / N-A 统一语义**：PASS = 有足够验证证据证明满足；FAIL = 有验证证据证明存在问题/冲突；UNKNOWN = 缺少证据，无法判断（不是失败，需更多证据）；N/A = 明确不适用，且已记录原因。Unknown != Fail，N/A 需写理由。
 - `references/context-layers.md` — four-layer knowledge model
 - `references/status-machine.md` — status flow and gates
 - `references/dual-prd-spec.md` — tiered PRD rules
