@@ -3,7 +3,7 @@ name: ai-product-workflow
 version: 1.2.0
 status: stable
 license: MIT
-description: Guide product managers to run full product cycles with AI Agents — project init, market analysis, requirement research, analysis, prototype, PRD, review, development sync, testing, release, feedback loop, plus Agent permissions, output quality gates, and version iteration. Use when user wants to initialize a product project scaffold, let Agent join end-to-end product work, build long-term product context, or apply AI product manager workflow.
+description: AI Product Project Review & Quality Framework — understand projects via unified workflow, execute Completeness / Consistency / Change Impact / Retrospective checks, trace evidence levels (VERIFIED / ASSUMED / INFERRED / UNVERIFIED), enforce Source of Truth + Human Gate, and continuously improve rules via regression. Use when user needs project understanding, product audit, consistency check, change impact analysis, or framework evolution.
 ---
 
 # AI Product Workflow

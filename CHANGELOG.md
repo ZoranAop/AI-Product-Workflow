@@ -20,7 +20,7 @@
 - **AI 产品专项要求**：AI 能力定义（模型 / 输入 / 输出 / 上下文 / 工具 / 权限 / 成本 / 延迟 / 失败 / 降级策略）、内置 Agent 定义、AI 计费规则（`references/ai-product-rules.md`）。
 - **多 Agent 协作模式**：单 Agent / 多 Agent 流水线 / Agent 自动执行 + 人工审批的适用边界（`references/multi-agent.md`）。
 - **版本迭代原则**：版本闭环（目标 → … → 复盘 → 下一版本）与版本末五问（`references/version-iteration.md`）。
-- **14 篇 references**：context-layers、product-goals-metrics、market-user-research、requirement-analysis、prototype-design、review-decisions、dev-testing、release-feedback、ai-product-rules、multi-agent、version-iteration、skill-ecosystem、new-project-bootstrap、check-modes / project-understanding / retrospective-loop。
+- **21 份 references**：context-layers、product-goals-metrics、market-user-research、requirement-analysis、prototype-design、review-decisions、dev-testing、release-feedback、ai-product-rules、multi-agent、version-iteration、skill-ecosystem、new-project-bootstrap、check-modes / project-understanding / retrospective-loop。
 - **9 份 assets/rules**：naming-and-structure、source-of-truth、status-and-gates、product-workflow、agent-permissions、evidence-and-confidence、quality-gates、change-management、completeness-check。
 - **assets/templates**：requirement-pool（含需求卡 + P0–P3 图例）、confirmation-summary、dual-prd-skeleton、review-record、decision-log、metrics-definition、skill-integration-plan、completeness-report、ai-regression-cases。
 
