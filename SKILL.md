@@ -230,5 +230,6 @@ For products that are themselves AI-powered, define per AI feature: model, input
 - `references/ai-product-rules.md` — AI product specific requirements
 - `references/multi-agent.md` — multi-Agent collaboration patterns
 - `references/version-iteration.md` — version iteration principles
+- `references/skill-ecosystem.md` — online skill ecosystem mapping (reference only, no installation)
 - `assets/rules/` — copy-ready core rule templates (naming-and-structure, source-of-truth, status-and-gates, product-workflow, agent-permissions, evidence-and-confidence, quality-gates, change-management)
-- `assets/templates/` — requirement pool + card, confirmation summary, tiered PRD skeleton, review record, decision log, metrics definition
+- `assets/templates/` — requirement pool + card, confirmation summary, tiered PRD skeleton, review record, decision log, metrics definition, skill integration plan
