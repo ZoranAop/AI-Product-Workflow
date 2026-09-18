@@ -12,13 +12,13 @@
 
 ## 简介
 
-本项目提供两套互补的能力：
+v1.2.0 将完整工作流与可执行检查层合并为一个版本，包含两大块能力：
 
 ### 1. 产品工作流（核心）
-面向产品经理 + AI Agent 的标准化端到端工作流：项目初始化 → 产品目标与指标 → 市场与用户研究 → 需求分析与优先级 → 技术可行性 → 原型与交互设计 → 分级 PRD → 评审与决策记录 → 开发同步 → 测试验收 → 发布与运营反馈 → 复盘迭代。
+面向产品经理 + AI Agent 的标准化端到端工作流：项目初始化 → 产品目标与指标 → 市场与用户研究 → 需求分析与优先级 → 技术可行性 → 原型与交互设计 → 分级 PRD（小 / 普通 / 复杂三级）→ 评审与决策记录 → 开发同步 → 测试验收 → 发布与运营反馈 → 复盘迭代。配套能力：Agent 权限分级（L0–L4）、AI 输出质量门、变更管理规则、AI 产品专项规则（AI 能力 / Agent / 计费）、多 Agent 协作模式、版本迭代原则、在线 Skill 生态映射（仅参考，不安装）、新品项目 14 天 Bootstrap 清单。
 
-### 2. 产品检查层（v1.2 新增）
-在原有工作流、规则、模板之上，补齐“可执行检查”：完整性矩阵（PC-* 检查项）、跨文档一致性检查、证据判定（VERIFIED / ASSUMED / INFERRED / UNVERIFIED）、Stage Gate 机器可判定规则、检查报告与回归集。对应 6 个检查模式（Understand / Advance / Completeness / Consistency / Change Impact / Retrospective），路由见 `references/check-modes.md`。
+### 2. 产品检查层（可执行检查引擎）
+在原有工作流、规则、模板之上，补齐“可执行检查”：完整性矩阵（PC-* 检查项，13 类）、跨文档一致性检查（5 条不变量）、统一证据判定（VERIFIED / ASSUMED / INFERRED / UNVERIFIED）、Stage Gate 机器可判定规则、检查报告与回归集。对应 6 个检查模式（Understand / Advance / Completeness / Consistency / Change Impact / Retrospective），路由见 `references/check-modes.md`。
 
 ### 六个检查模式
 
